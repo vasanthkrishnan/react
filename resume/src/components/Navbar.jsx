@@ -29,15 +29,15 @@ const Navbar = () => {
     const [visible, setvisible] = useState(false)
     return (
         <>
-            <div className="w-full h-[4rem] flex justify-center items-center bg-blue-500">
+            <div className="w-full h-[4rem] fixed top-0 left-0 flex justify-center items-center bg-[#f5f5f5] shadow-xl">
                 <div className="w-[80%] h-full flex justify-center items-center flex-row">
-                    <div className='w-1/2 flex h-full justify-start items-center font-bold text-xl text-white'>Vasantha Krishnan S</div>
+                    <div className='w-1/2 flex h-full justify-start items-center font-bold text-2xl text-Black'>Vasantha Krishnan S</div>
                     <div className='w-1/2 flex  h-full justify-end items-center'>
                         <ul className='w-full list-none flex flex-row justify-center gap-6'>
                            {
                                 NavLinks.map((navdata, index) => (
                                     <NavLink key={index} to = {navdata.url}>
-                                        <li className='font-bold text-xl text-white'>{ navdata.title }</li>
+                                        <li className='font-bold text-xl text-black'>{ navdata.title }</li>
                                     </NavLink>
                                 ))
                            }
@@ -50,7 +50,7 @@ const Navbar = () => {
                                 <li className='font-bold text-xl text-white'>Contact</li>
                             </Link> */}
                         </ul>
-                        <User2 className='h-9 w-9 text-white rounded-full border-2 border-white hover:cursor-pointer' onClick={() => setvisible(true)} />
+                        <User2 className='h-9 w-9 text-black rounded-full border-2 border-black hover:text-white hover:border-white hover:bg-black hover:cursor-pointer' onClick={() => setvisible(true)} />
                     </div>
                 </div>
 

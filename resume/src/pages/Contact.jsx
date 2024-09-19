@@ -3,8 +3,7 @@ import { useRef } from 'react'
 
 const Contact = () => {
 
-  const firstNameref = useRef(null)
-  const lastNameref = useRef(null)
+  const nameref = useRef(null)
   const emailref = useRef(null)
   const phoneref = useRef(null)
   const messageref = useRef(null)
@@ -13,25 +12,31 @@ const Contact = () => {
 
     e.preventDefault()
 
-    console.log(firstNameref.current.value)
-    console.log(lastNameref.current.value)
+    console.log(nameref.current.value)
     console.log(emailref.current.value)
     console.log(phoneref.current.value)
     console.log(messageref.current.value)
   }
   return (
     <>
-         <div className="h-screen w-screen flex justify-center items-center">
-            <div className="h-[60%] w-[30%] flex justify-center items-center bg-[#f8f8f8] rounded-md shadow-md">
-              <form action="" className="h-full w-full flex flex-col justify-center items-center space-y-5" onSubmit={ contactReport }>
-                <div className="h-[3rem] w-[17rem] flex flex-row justify-center items-center space-x-4">
-                  <input ref={ firstNameref } className="w-[8rem] h-[3rem] p-3 border-2 text-xl rounded-md" type="text" name="" placeholder="First-name" id="" />
-                  <input ref={ lastNameref } type="text" className="w-[8rem] h-[3rem] p-3 border-2 text-xl rounded-md" name="" placeholder="Last-name" id="" />
+         <div className="h-screen w-screen flex justify-center items-center bg-[#efebeb]">
+            <div className="h-[60%] w-[45%] flex justify-center items-center bg-[#f8f8f8] rounded-md shadow-md">
+              <form className='h-[90%] w-[90%] flex flex-row' onSubmit={ contactReport }>
+                <div className='h-full w-2/5 bg-[#f8f8f8] '>
+                  <h1 className='h-[20%] font-bold text-4xl p-[1.5rem]'>Contact us</h1>
+                  <User className='h-[40%] w-[70%] text-2xl flex justify-center mt-[2rem] ml-5 items-center'></User>
                 </div>
-                  <input ref={ emailref } type="email" className="h-[3rem] w-[17rem] p-3 border-2 text-xl rounded-md" placeholder="email" name="" id="" />
-                  <input ref={ phoneref } type="tel" className="h-[3rem] w-[17rem] p-3 border-2 text-xl rounded-md" name="" placeholder="Phone" id="" />
-                  <input ref={ messageref } type="text" className="h-[3rem] w-[17rem] p-3 border-2 text-xl rounded-md text-gray-500" name="" placeholder="Message" id="" />
-                  <button className="h-[3rem] w-[17rem] border-b bg-blue-500 font-bold text-xl text-white rounded-md hover:bg-blue-600">Send</button>
+                <div className='h-full w-3/5 bg-[#343434] flex flow-row justify-center items-center rounded-md shadow-md'>
+                    <div className='h-[70%] w-[80%]'>
+                      <input type="text" ref={ nameref } className='text-gray-400 w-full h-[20%] border-[#f8f8f8] border-b p-3 text-xl focus:outline-none bg-[#343434]' placeholder='name' id="" />
+                      <input type="text" ref={ emailref } className='text-gray-400 w-full h-[20%] border-[#f8f8f8] border-b p-3 text-xl focus:outline-none bg-[#343434]' placeholder='email' id="" />
+                      <input type="text" ref={ phoneref } className='text-gray-400 w-full h-[20%] border-[#f8f8f8] border-b p-3 text-xl focus:outline-none bg-[#343434]' placeholder='phone' id="" />
+                      <textarea ref={ messageref } className=' resize-none text-gray-400 w-full h-[20%] border-[#f8f8f8] border-b p-3 text-xl focus:outline-none bg-[#343434]' placeholder='message' id=""></textarea>
+                      <div className=' h-[20%] w-full flex justify-center items-center'>
+                        <button className=' h-full w-full bg-[#f8f8f8] mt-[4rem] font-bold text-2xl rounded-md hover:cursor-pointer hover:bg-[#b3afaf] hover:text-[#000000]'>send</button>
+                      </div>
+                    </div>
+                </div>
               </form>
             </div>
          </div>
