@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react"
 import ProjectCard from "../components/ProjectCard"
 import { getProject } from "../service/api"
+import AddCardComponent from "../components/AddCardComponent"
 
 // const projectData = [
 //   {
@@ -47,6 +48,7 @@ if(!projectData) {
     <>
       <div className="h-screen w-screen bg-[#efebeb] flex justify-center items-center">
         <div className="h-full w-[90%] flex flex-row flex-wrap justify-center items-center gap-8">
+          < AddCardComponent />
           {
             projectData.map((data, index) => (
                 < ProjectCard title={ data.title } tools={ data. tools } duration={ data.duration } key={ index } id={ data.index} />
