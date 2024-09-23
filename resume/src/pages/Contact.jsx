@@ -33,10 +33,10 @@ const Contact = () => {
                 </div>
                 <div className='h-full w-3/5 bg-[#343434] flex flow-row justify-center items-center rounded-md shadow-md'>
                     <div className='h-[70%] w-[80%]'>
-                      <input type="text" ref={ nameref } className='text-gray-400 w-full h-[20%] border-[#f8f8f8] border-b p-3 text-xl focus:outline-none bg-[#343434]' placeholder='name' id="" />
-                      <input type="text" ref={ emailref } className='text-gray-400 w-full h-[20%] border-[#f8f8f8] border-b p-3 text-xl focus:outline-none bg-[#343434]' placeholder='email' id="" />
-                      <input type="text" ref={ phoneref } className='text-gray-400 w-full h-[20%] border-[#f8f8f8] border-b p-3 text-xl focus:outline-none bg-[#343434]' placeholder='phone' id="" />
-                      <textarea ref={ messageref } className=' resize-none text-gray-400 w-full h-[20%] border-[#f8f8f8] border-b p-3 text-xl focus:outline-none bg-[#343434]' placeholder='message' id=""></textarea>
+                      <input type="text" ref={ nameref } className='text-gray-400 w-full h-[20%] border-[#f8f8f8] border-b p-3 text-xl focus:outline-none bg-[#343434] focus:placeholder-transparent' placeholder='name' id="" />
+                      <input type="text" ref={ emailref } className='text-gray-400 w-full h-[20%] border-[#f8f8f8] border-b p-3 text-xl focus:outline-none bg-[#343434] focus:placeholder-transparent' placeholder='email' id="" />
+                      <input type="text" ref={ phoneref } className='text-gray-400 w-full h-[20%] border-[#f8f8f8] border-b p-3 text-xl focus:outline-none bg-[#343434] focus:placeholder-transparent' placeholder='phone' id="" />
+                      <textarea ref={ messageref } className=' resize-none text-gray-400 w-full h-[20%] border-[#f8f8f8] border-b p-3 text-xl focus:outline-none bg-[#343434] focus:placeholder-transparent' placeholder='message' id=""></textarea>
                       <div className=' h-[20%] w-full flex justify-center items-center'>
                         <button className=' h-full w-full bg-[#f8f8f8] mt-[4rem] font-bold text-2xl rounded-md hover:cursor-pointer hover:bg-[#b3afaf] hover:text-[#000000]'>send</button>
                       </div>

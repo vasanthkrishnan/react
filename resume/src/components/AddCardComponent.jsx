@@ -52,9 +52,9 @@ const AddCardComponent = ({ fetchProject }) => {
                             <form className='h-[90%] w-[80%] flex flex-row' onSubmit={ handleSubmit }>
                             <div className='h-full w-full bg-[#343434] flex flow-row justify-center items-center rounded-md shadow-md'>
                                 <div className='h-[70%] w-[80%]'>
-                                    <input type="text" ref={ titleref } className='text-gray-400 w-full h-[20%] border-[#f8f8f8] border-b p-3 text-xl focus:outline-none bg-[#343434]' placeholder='title' id="" />
-                                    <input type="text" ref={ toolsref } className='text-gray-400 w-full h-[20%] border-[#f8f8f8] border-b p-3 text-xl focus:outline-none bg-[#343434]' placeholder='tools' id="" />
-                                    <input type="text" ref={ durationref } className='text-gray-400 w-full h-[20%] border-[#f8f8f8] border-b p-3 text-xl focus:outline-none bg-[#343434]' placeholder='duration' id="" />
+                                    <input type="text" ref={ titleref } className='text-gray-400 w-full h-[20%] border-[#f8f8f8] border-b p-3 text-xl focus:outline-none bg-[#343434] focus:placeholder-transparent' placeholder='title' id="" />
+                                    <input type="text" ref={ toolsref } className='text-gray-400 w-full h-[20%] border-[#f8f8f8] border-b p-3 text-xl focus:outline-none bg-[#343434] focus:placeholder-transparent' placeholder='tools' id="" />
+                                    <input type="text" ref={ durationref } className='text-gray-400 w-full h-[20%] border-[#f8f8f8] border-b p-3 text-xl focus:outline-none bg-[#343434] focus:placeholder-transparent' placeholder='duration' id="" />
                                     <div className=' h-[20%] w-full flex justify-center items-center'>
                                         <button type='submit' className=' h-full w-1/2 bg-[#f8f8f8] mt-[7rem] font-bold text-2xl rounded-md hover:cursor-pointer hover:bg-[#b3afaf] hover:text-[#000000]'>add</button>
                                     </div>
