@@ -1,15 +1,14 @@
-import { Plus } from 'lucide-react'
+import { Check, MessageCircleWarning, Plus } from 'lucide-react'
 import React, { useRef, useState } from 'react'
 import { addProject } from '../service/api'
-
-export const AddCardComponent = () => {
+import { Toaster, toast } from 'sonner'
+const AddCardComponent = ({ fetchProject }) => {
 
     const titleref = useRef(null)
     const toolsref = useRef(null)
     const durationref = useRef(null)
 
     const handleSubmit = async (e) => {
-        if(titleref != null && titleref != null && durationref != null) {
         e.preventDefault()
         const projectData = {
             title: titleref.current.value,
@@ -21,13 +20,22 @@ export const AddCardComponent = () => {
             console.log(response.status)
             if(response.status == 201) {
                 console.log("Added")
+                toast('Project added !', {
+                    className: 'bg-gradient-to-r from-green-500 to-lime-500 rounded-lg shadow-lg text-white p-3 flex gap-5 text-lg font-bold',
+                    icon: <Check />,
+                });
+                fetchProject()
             }
         } catch (error) {
-            console.log("error")
+            console.error(error)
+            toast('Error', {
+                className: 'bg-gradient-to-r from-yellow-500 to-amber-500 rounded-lg shadow-lg text-white p-3 flex gap-5 text-lg font-bold',
+                icon: <MessageCircleWarning />,
+            });
         }
         setVisible(false)
     }
-}
+
 
     const [visible, setVisible] = useState(false)
     return (
@@ -58,6 +66,7 @@ export const AddCardComponent = () => {
                 </>
             )
         }
+        <Toaster richColors />
     </>
   )
 }
